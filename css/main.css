@@ -320,3 +320,18 @@ section#george-floyd {
     margin: 0 0 300px 0;
   }
 }
+
+#imgOverlay {
+  position: absolute;
+  float: left;
+  width: 50vw;
+  z-index: 300000;
+  margin-left: 13vw;
+  margin-top: 3vw;
+}
+
+#videoCamera {
+  float: left;
+  position: absolute;
+  width: 75vw;
+}
