@@ -22,11 +22,11 @@ limitations under the License.
 // window.isSecureContext could be used for Chrome
 var isSecureOrigin = location.protocol === 'https:' ||
 location.host === 'localhost';
-if (!isSecureOrigin) {
-  alert('getUserMedia() must be run from a secure origin: HTTPS or localhost.' +
-    '\n\nChanging protocol to HTTPS');
-  location.protocol = 'HTTPS';
-}
+// if (!isSecureOrigin) {
+//   alert('getUserMedia() must be run from a secure origin: HTTPS or localhost.' +
+//     '\n\nChanging protocol to HTTPS');
+//   location.protocol = 'HTTPS';
+// }
 
 var constraints;
 var imageCapture;
@@ -38,6 +38,7 @@ var takePhotoButton = document.querySelector('button#takePhoto');
 var canvas = document.querySelector('canvas');
 var img = document.querySelector('img');
 var video = document.querySelector('video');
+var videoContainer = document.querySelector('#videoContainer')
 var videoSelect = document.querySelector('select#videoSource');
 var zoomInput = document.querySelector('input#zoom');
 
@@ -95,6 +96,7 @@ function gotStream(stream) {
   mediaStream = stream;
   video.srcObject = stream;
   video.classList.remove('hidden');
+  videoContainer.classList.remove('hidden');
   imageCapture = new ImageCapture(stream.getVideoTracks()[0]);
   getCapabilities();
 }
