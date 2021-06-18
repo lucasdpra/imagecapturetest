@@ -324,14 +324,22 @@ section#george-floyd {
 #imgOverlay {
   position: absolute;
   float: left;
-  width: 50vw;
+  width: 40vw;
   z-index: 300000;
-  margin-left: 13vw;
+  margin-left: 10.5vw;
   margin-top: 3vw;
 }
 
 #videoCamera {
   float: left;
   position: absolute;
-  width: 75vw;
+  width: 60vw;
+}
+
+#cameraCanvas {
+  background-color: #ccc;
+  max-width: 100%;
+  width: 60vw;
+  position: absolute;
+  margin-top: 50vw;
 }
